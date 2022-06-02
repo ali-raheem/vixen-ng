@@ -1,0 +1,13 @@
+<mat-card class="vix" *ngIf="post">
+    <mat-card-subtitle >
+        <b>@{{post.address}}</b>
+        posted at {{post.timestamp}}
+        <a class="vixer-name" [routerLink]="['/page', post.address]"><mat-icon>timeline</mat-icon></a> 
+        <a class="vixer-name" [routerLink]="['/post', post.proof]"><mat-icon>link</mat-icon></a>
+        <br/>
+        <small>{{post.signature}}</small>
+    </mat-card-subtitle>
+    <mat-card-content>
+        {{post.content}}
+    </mat-card-content>
+</mat-card>
